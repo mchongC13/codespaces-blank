@@ -1,4 +1,4 @@
-"""This is a guess the number game."""
+"""This is a guess the number game. Python task 3.1"""
 #This imports random
 import random
 
@@ -21,3 +21,18 @@ if user_guess == secret_number:
     print("Congratulations! You got it!")
 else:
     print("Sorry, but the answer was", secret_number)
+
+"""THis program finds random numbers, adds them and finds the average. Python task 3.2"""
+import random
+
+total = 0
+num_trials = 10
+
+for i in range(num_trials):
+    rand_num = random.randint(1, 100)
+    print(f"{i + 1}: {rand_num}")
+    total += rand_num
+
+print("Total:", total)
+print("Average:", total / num_trials)
+
