@@ -22,6 +22,8 @@ if user_guess == secret_number:
 else:
     print("Sorry, but the answer was", secret_number)
 
+
+
 """THis program finds random numbers, adds them and finds the average. Python task 3.2"""
 import random
 
@@ -35,4 +37,25 @@ for i in range(num_trials):
 
 print("Total:", total)
 print("Average:", total / num_trials)
+
+
+"""Py Task 3.4 - This is a guess the number game."""
+import random
+
+guesses_taken = 0
+secret_number = random.randint(1, 100)
+#print("Shhh", secret_number)
+guess = secret_number + 1
+
+while guess != secret_number:
+    guess = int(input("Take a guess: "))
+    guesses_taken += 1
+
+    if guess < secret_number:
+        print('Your guess is too low.')
+
+    if guess > secret_number:
+        print('Your guess is too high.')
+
+print(f'Good job! You guessed my number in {guesses_taken} guesses!')
 
